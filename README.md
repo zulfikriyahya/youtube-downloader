@@ -16,7 +16,7 @@ Sebuah skrip Python sederhana untuk mengunduh video atau audio dari YouTube, bai
 
 ## Instalasi
 
-### 1. Clone repositori (opsional)
+### 1. Clone repositori
 
 ```bash
 git clone https://github.com/zulfikriyahya/youtube-downloader.git
