@@ -2,6 +2,8 @@
 
 Sebuah skrip Python sederhana untuk mengunduh video atau audio dari YouTube, baik secara individu maupun dalam bentuk playlist. Dibangun menggunakan [yt-dlp](https://github.com/yt-dlp/yt-dlp) dan menampilkan progress bar yang informatif dengan bantuan `colorama`.
 
+![Hero](./image.png)
+
 ---
 
 ## Fitur
