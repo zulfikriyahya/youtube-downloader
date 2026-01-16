@@ -1,76 +1,71 @@
 # ZEDLABS YouTube Downloader
 
-A high-performance Python CLI tool for downloading video & audio from YouTube, social media, and 1000+ sites. Features advanced proxy support and an animated terminal UI.
-
-![ZEDLABS YouTube Downloader](./proxy_mode.png)
-
----
-
-## Features
-
-### Core Functionality
-
-- Download YouTube videos in MP4 format (best quality)
-- Extract audio only in MP3 format (320kbps)
-- Full playlist support with batch downloading
-- Real-time progress bar with download statistics
-- Customizable output folders with auto-organization
-
-### Advanced Features
-
-- **High-Performance Proxy System**: Test and use multiple proxies with automatic fallback
-- **Concurrent Proxy Testing**: Test up to 10 proxies simultaneously
-- **Smart Proxy Selection**: Automatically sorts and uses fastest proxies
-- **Latency Monitoring**: Real-time proxy performance metrics
-- **Auto-Retry Mechanism**: Seamless switching to backup proxies on failure
-- **Animated Terminal UI**: Professional loading animations and progress indicators
-
-### Performance Optimizations
-
-- Concurrent fragment downloads (5 fragments simultaneously)
-- Pandas-powered CSV parsing for faster proxy loading
-- ThreadPoolExecutor for efficient multi-threading
-- Optimized chunk sizes (10MB) for faster downloads
-- Smart timeout management and retry logic
-
----
+Alat CLI Python berkinerja tinggi untuk mengunduh video dan audio dari YouTube, media sosial, dan lebih dari 1000 situs. Dilengkapi dengan dukungan proxy canggih dan antarmuka terminal animasi.
 
 ## Screenshots
 
 ### Single Video Mode
 
-![Single Video/Audio Download](./single_mode.png)
+[Single Video/Audio Download](./single_mode.png)
 
 ### Playlist Mode
 
-![Playlist Video/Audio Download](./playlist_mode.png)
+[Playlist Video/Audio Download](./playlist_mode.png)
 
 ### Proxy Mode
 
-![Proxy System](./proxy_mode.png)
+[Proxy System](./proxy_mode.png)
+
+## Fitur Utama
+
+### Fungsionalitas Inti
+
+- Unduh video YouTube dalam format MP4 (kualitas terbaik)
+- Ekstraksi audio dalam format MP3 (320kbps)
+- Dukungan playlist lengkap dengan unduhan batch
+- Progress bar real-time dengan statistik unduhan
+- Folder output yang dapat disesuaikan dengan organisasi otomatis
+
+### Fitur Lanjutan
+
+- **Sistem Proxy Berkinerja Tinggi**: Uji dan gunakan beberapa proxy dengan fallback otomatis
+- **Pengujian Proxy Konkuren**: Uji hingga 10 proxy secara bersamaan
+- **Pemilihan Proxy Cerdas**: Otomatis mengurutkan dan menggunakan proxy tercepat
+- **Pemantauan Latensi**: Metrik kinerja proxy real-time
+- **Mekanisme Auto-Retry**: Beralih ke proxy cadangan secara otomatis saat gagal
+- **Antarmuka Terminal Animasi**: Animasi loading dan indikator progress profesional
+
+### Optimasi Kinerja
+
+- Unduhan fragmen konkuren (5 fragmen bersamaan)
+- Parsing CSV berbasis Pandas untuk pemuatan proxy lebih cepat
+- ThreadPoolExecutor untuk multi-threading efisien
+- Ukuran chunk optimal (10MB) untuk unduhan lebih cepat
+- Manajemen timeout dan logika retry yang cerdas
 
 ---
 
-## Installation
+## Instalasi
 
-### Prerequisites
+### Prasyarat
 
-- Python 3.7 or higher
-- FFmpeg installed on your system
+- Python 3.7 atau lebih tinggi
+- FFmpeg terinstal di sistem
 
-### 1. Clone the repository
+### Langkah Instalasi
+
+**1. Clone repositori**
 
 ```bash
 git clone https://github.com/zulfikriyahya/youtube-downloader.git
 cd youtube-downloader
 ```
 
-### 2. Create and activate virtual environment
+**2. Buat dan aktifkan virtual environment**
 
 ```bash
 python3 -m venv venv
 
-# Activate virtual environment:
 # Windows
 venv\Scripts\activate
 
@@ -78,55 +73,39 @@ venv\Scripts\activate
 source venv/bin/activate
 ```
 
-### 3. Install dependencies
+**3. Install dependensi**
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. Install FFmpeg
+**4. Install FFmpeg**
 
-FFmpeg is required for merging video/audio streams and audio extraction.
-
-**Windows:**
-Download from [https://ffmpeg.org/download.html](https://ffmpeg.org/download.html) and add to PATH
-
-**macOS:**
-
-```bash
-brew install ffmpeg
-```
-
-**Linux (Ubuntu/Debian):**
-
-```bash
-sudo apt update
-sudo apt install ffmpeg
-```
+- **Windows**: Unduh dari https://ffmpeg.org/download.html dan tambahkan ke PATH
+- **macOS**: `brew install ffmpeg`
+- **Linux**: `sudo apt update && sudo apt install ffmpeg`
 
 ---
 
-## Usage
+## Cara Penggunaan
 
-### Basic Usage
-
-Run the script:
+Jalankan skrip:
 
 ```bash
 python3 main.py
 ```
 
-Follow the interactive prompts:
+Ikuti petunjuk interaktif:
 
-1. Choose whether to use proxy (y/n)
-2. If using proxy, provide proxy CSV file path
-3. Enter YouTube video or playlist URL
-4. Select download mode: (v) for video or (a) for audio only
-5. Specify output folder (default: hasil)
+1. Pilih apakah menggunakan proxy (y/n)
+2. Jika menggunakan proxy, berikan path file CSV proxy
+3. Masukkan URL video atau playlist YouTube
+4. Pilih mode unduhan: (v) untuk video atau (a) untuk audio saja
+5. Tentukan folder output (default: hasil)
 
-### Proxy Setup
+### Pengaturan Proxy
 
-Create a `proxy.csv` file with the following format:
+Buat file `proxy.csv` dengan format:
 
 ```csv
 ip_address
@@ -135,43 +114,43 @@ ip_address
 proxy.example.com:8888
 ```
 
-The system will:
+Sistem akan:
 
-- Test all proxies concurrently (10 threads)
-- Display latency for each proxy
-- Sort by response time
-- Use fastest proxy for downloads
-- Auto-switch to backup proxies on failure
-
----
-
-## Output Structure
-
-### Single Videos
-
-- Video: `hasil/Video_Title.mp4`
-- Audio: `hasil/Video_Title.mp3`
-
-### Playlists
-
-- Video: `hasil/Playlist_Name/Video_Title.mp4`
-- Audio: `hasil/Playlist_Name/Video_Title.mp3`
+- Menguji semua proxy secara bersamaan (10 thread)
+- Menampilkan latensi setiap proxy
+- Mengurutkan berdasarkan waktu respons
+- Menggunakan proxy tercepat untuk unduhan
+- Beralih otomatis ke proxy cadangan saat gagal
 
 ---
 
-## Configuration
+## Struktur Output
 
-You can modify the following constants in `main.py`:
+### Video Tunggal
+
+- Video: `hasil/Judul_Video.mp4`
+- Audio: `hasil/Judul_Video.mp3`
+
+### Playlist
+
+- Video: `hasil/Nama_Playlist/Judul_Video.mp4`
+- Audio: `hasil/Nama_Playlist/Judul_Video.mp3`
+
+---
+
+## Konfigurasi
+
+Modifikasi konstanta berikut di `main.py`:
 
 ```python
-CHECK_URL = "https://www.google.com"  # URL for proxy testing
-TIMEOUT = 8                            # Proxy timeout in seconds
-MAX_THREADS = 10                       # Concurrent proxy testing threads
+CHECK_URL = "https://www.google.com"   # URL untuk pengujian proxy
+TIMEOUT = 8                            # Timeout proxy dalam detik
+MAX_THREADS = 10                       # Thread pengujian proxy konkuren
 ```
 
 ---
 
-## Dependencies
+## Dependensi
 
 ```
 yt-dlp>=2024.0.0
@@ -182,218 +161,182 @@ requests>=2.31.0
 
 ---
 
-## Troubleshooting
+## Pemecahan Masalah
 
-### Common Issues
+### Masalah Umum
 
-**Error: FFmpeg not found**
+**Error: FFmpeg tidak ditemukan**
 
-- Ensure FFmpeg is installed and added to system PATH
-- Restart terminal after installation
+- Pastikan FFmpeg terinstal dan ditambahkan ke PATH sistem
+- Restart terminal setelah instalasi
 
-**Proxy connection errors**
+**Error koneksi proxy**
 
-- Verify proxy format in CSV (ip:port)
-- Test proxy manually with curl or browser
-- Some proxies may require authentication
+- Verifikasi format proxy di CSV (ip:port)
+- Uji proxy secara manual dengan curl atau browser
+- Beberapa proxy mungkin memerlukan autentikasi
 
-**Download speed issues**
+**Masalah kecepatan unduhan**
 
-- Try using proxies with lower latency
-- Reduce concurrent fragment downloads
-- Check your internet connection
+- Gunakan proxy dengan latensi rendah
+- Kurangi unduhan fragmen konkuren
+- Periksa koneksi internet
 
-**SSL Certificate errors**
+**Error sertifikat SSL**
 
-- Update yt-dlp: `pip install -U yt-dlp`
-- Update certifi: `pip install -U certifi`
-
----
-
-## Performance Tips
-
-1. **Use Quality Proxies**: Free proxies are often slow or unreliable
-2. **Increase Thread Count**: Modify MAX_THREADS for faster proxy testing
-3. **Update yt-dlp**: Keep yt-dlp updated for best performance
-4. **SSD Storage**: Download to SSD for faster write speeds
-5. **Stable Connection**: Use wired connection for large downloads
+- Perbarui yt-dlp: `pip install -U yt-dlp`
+- Perbarui certifi: `pip install -U certifi`
 
 ---
 
-## Legal Notice
+## Tips Kinerja
 
-This tool is for personal use only. Users are responsible for complying with YouTube's Terms of Service and copyright laws. Do not use this tool to download copyrighted content without permission.
+1. **Gunakan Proxy Berkualitas**: Proxy gratis sering lambat atau tidak andal
+2. **Tingkatkan Jumlah Thread**: Modifikasi MAX_THREADS untuk pengujian proxy lebih cepat
+3. **Perbarui yt-dlp**: Jaga yt-dlp tetap terbaru untuk kinerja optimal
+4. **Penyimpanan SSD**: Unduh ke SSD untuk kecepatan tulis lebih cepat
+5. **Koneksi Stabil**: Gunakan koneksi kabel untuk unduhan besar
 
 ---
 
-## Author
+## Pemberitahuan Hukum
+
+Alat ini hanya untuk penggunaan pribadi. Pengguna bertanggung jawab mematuhi Ketentuan Layanan YouTube dan hukum hak cipta. Jangan gunakan alat ini untuk mengunduh konten berhak cipta tanpa izin.
+
+---
+
+## Penulis
 
 **Yahya Zulfikri**
 
-- GitHub: [@zulfikriyahya](https://github.com/zulfikriyahya)
+GitHub: [@zulfikriyahya](https://github.com/zulfikriyahya)
 
 ---
 
-## License
+## Lisensi
 
-This project is open source and available for personal use. Please respect YouTube's Terms of Service and copyright regulations when using this tool.
-
----
-
-## Acknowledgments
-
-- [yt-dlp](https://github.com/yt-dlp/yt-dlp) - The core download engine
-- [colorama](https://github.com/tartley/colorama) - Cross-platform colored terminal output
-- [pandas](https://pandas.pydata.org/) - High-performance data structures
+Proyek ini bersifat open source dan tersedia untuk penggunaan pribadi. Harap hormati Ketentuan Layanan YouTube dan peraturan hak cipta saat menggunakan alat ini.
 
 ---
 
-## Version History
+## Riwayat Versi
 
-### v4.0 (Current)
+### v4.0 (Terkini)
 
-- Added high-performance proxy system
-- Concurrent proxy testing with ThreadPoolExecutor
-- Animated terminal UI with loading indicators
-- Smart proxy selection and auto-fallback
-- Performance optimizations for faster downloads
-- Enhanced progress bar with dynamic colors
+- Sistem proxy berkinerja tinggi
+- Pengujian proxy konkuren dengan ThreadPoolExecutor
+- Antarmuka terminal animasi
+- Pemilihan proxy cerdas dan auto-fallback
+- Optimasi kinerja untuk unduhan lebih cepat
 
 ### v3.0
 
-- Added playlist support
-- Improved error handling
-- Better progress tracking
+- Dukungan playlist
+- Penanganan error lebih baik
+- Pelacakan progress ditingkatkan
 
 ### v2.0
 
-- Added audio-only mode
-- Customizable output folders
-- Progress bar implementation
+- Mode audio saja
+- Folder output yang dapat disesuaikan
+- Implementasi progress bar
 
 ### v1.0
 
-- Initial release
-- Basic video download functionality
+- Rilis awal
+- Fungsionalitas dasar unduhan video
 
 ---
 
-## Contributing
+## Kontribusi
 
-We welcome contributions to improve ZEDLABS YouTube Downloader! Here's how you can help:
+Kontribusi untuk meningkatkan ZEDLABS YouTube Downloader sangat diterima:
 
-### Reporting Issues
+### Melaporkan Masalah
 
-If you encounter bugs or have feature requests:
+1. Periksa masalah yang ada di GitHub
+2. Berikan informasi detail tentang sistem (OS, versi Python)
+3. Sertakan pesan error dan log
+4. Jelaskan langkah untuk mereproduksi masalah
 
-1. Check existing issues on GitHub to avoid duplicates
-2. Provide detailed information about your system (OS, Python version)
-3. Include error messages and logs
-4. Describe steps to reproduce the issue
+### Pull Request
 
-### Pull Requests
+1. Fork repositori
+2. Buat branch fitur: `git checkout -b nama-fitur`
+3. Lakukan perubahan dan uji secara menyeluruh
+4. Commit dengan pesan jelas: `git commit -m "Tambah deskripsi fitur"`
+5. Push ke fork: `git push origin nama-fitur`
+6. Kirim pull request dengan deskripsi detail
 
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature-name`
-3. Make your changes and test thoroughly
-4. Commit with clear messages: `git commit -m "Add feature description"`
-5. Push to your fork: `git push origin feature-name`
-6. Submit a pull request with detailed description
+### Standar Kode
 
-### Code Standards
-
-- Follow PEP 8 style guidelines
-- Add comments for complex logic
-- Update documentation for new features
-- Test changes on multiple platforms when possible
+- Ikuti pedoman gaya PEP 8
+- Tambahkan komentar untuk logika kompleks
+- Perbarui dokumentasi untuk fitur baru
+- Uji perubahan di berbagai platform jika memungkinkan
 
 ---
 
 ## Roadmap
 
-### Planned Features
+### Fitur yang Direncanakan
 
-- **v5.0 (Future)**
-  - GUI interface with Tkinter
-  - Resume interrupted downloads
-  - Scheduled downloads
-  - Download queue management
-  - Browser extension integration
-- **v4.5 (Next Release)**
-  - SOCKS proxy support
-  - Custom quality selection
-  - Subtitle download support
-  - Download history tracking
-  - Configuration file support
+**v5.0 (Masa Depan)**
 
----
+- Antarmuka GUI dengan Tkinter
+- Lanjutkan unduhan yang terputus
+- Unduhan terjadwal
+- Manajemen antrian unduhan
+- Integrasi ekstensi browser
 
-## FAQ
+**v4.5 (Rilis Berikutnya)**
 
-**Q: Can I download entire channels?**  
-A: Currently only playlist support is available. Full channel downloading will be added in future versions.
-
-**Q: Does this work with age-restricted videos?**  
-A: Some age-restricted content may require authentication. This feature is planned for future releases.
-
-**Q: Can I use this on a server without display?**  
-A: Yes, the tool works in headless environments. Progress bars will display properly in any terminal.
-
-**Q: How many proxies can I test simultaneously?**  
-A: Default is 10 concurrent threads. You can modify MAX_THREADS in the configuration.
-
-**Q: Are premium/paid proxies supported?**  
-A: Yes, use the format `username:password@ip:port` in your proxy.csv file.
+- Dukungan proxy SOCKS
+- Pemilihan kualitas kustom
+- Dukungan unduhan subtitle
+- Pelacakan riwayat unduhan
+- Dukungan file konfigurasi
 
 ---
 
-## Support
+## Pertanyaan Umum
 
-For support and questions:
+**T: Bisakah mengunduh seluruh channel?**  
+J: Saat ini hanya dukungan playlist yang tersedia. Unduhan channel penuh akan ditambahkan di versi mendatang.
 
-- **GitHub Issues**: [Report bugs or request features](https://github.com/zulfikriyahya/youtube-downloader/issues)
-- **Discussions**: Join GitHub Discussions for community help
-- **Email**: Contact via GitHub profile
+**T: Apakah berfungsi dengan video yang dibatasi usia?**  
+J: Beberapa konten yang dibatasi usia mungkin memerlukan autentikasi. Fitur ini direncanakan untuk rilis mendatang.
 
----
+**T: Bisakah digunakan di server tanpa display?**  
+J: Ya, alat ini berfungsi di lingkungan headless. Progress bar akan ditampilkan dengan baik di terminal mana pun.
 
-## Changelog
+**T: Berapa banyak proxy yang dapat diuji bersamaan?**  
+J: Default adalah 10 thread konkuren. Anda dapat memodifikasi MAX_THREADS di konfigurasi.
 
-### [4.0.0] - 2024
-
-**Added**
-
-- High-performance proxy system with concurrent testing
-- Animated terminal UI with loading indicators
-- Smart proxy selection and automatic fallback
-- Real-time latency monitoring
-- Enhanced progress bars with dynamic colors
-
-**Changed**
-
-- Optimized download performance with concurrent fragments
-- Improved error handling and retry logic
-- Better proxy validation and testing
-
-**Fixed**
-
-- Memory leaks in long-running downloads
-- Progress bar accuracy issues
-- Proxy timeout handling
+**T: Apakah proxy premium/berbayar didukung?**  
+J: Ya, gunakan format `username:password@ip:port` di file proxy.csv.
 
 ---
 
-## Security
+## Dukungan
 
-### Reporting Vulnerabilities
+Untuk dukungan dan pertanyaan:
 
-If you discover a security vulnerability, please email the details to the project maintainer. Do not create public issues for security concerns.
+- **GitHub Issues**: Laporkan bug atau minta fitur
+- **Discussions**: Bergabung dengan GitHub Discussions untuk bantuan komunitas
+- **Email**: Hubungi melalui profil GitHub
 
-### Best Practices
+---
 
-- Keep yt-dlp and dependencies updated
-- Use trusted proxy sources only
-- Avoid storing authentication credentials in plain text
-- Review proxy.csv file permissions
+## Keamanan
 
-**⭐ Star this repository if you find it useful!**
+### Melaporkan Kerentanan
+
+Jika menemukan kerentanan keamanan, kirim email detail ke pengelola proyek. Jangan buat issue publik untuk masalah keamanan.
+
+### Praktik Terbaik
+
+- Perbarui yt-dlp dan dependensi secara berkala
+- Gunakan sumber proxy terpercaya saja
+- Hindari menyimpan kredensial autentikasi dalam teks biasa
+- Tinjau izin file proxy.csv
