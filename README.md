@@ -1,6 +1,6 @@
 # ZEDLABS YouTube Downloader
 
-A high-performance Python CLI tool for downloading YouTube videos and audio with advanced proxy support. Built with yt-dlp and featuring an animated, colorful terminal interface.
+A high-performance Python CLI tool for downloading video & audio from YouTube, social media, and 1000+ sites. Features advanced proxy support and an animated terminal UI.
 
 ![ZEDLABS YouTube Downloader](./proxy_mode.png)
 
