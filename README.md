@@ -207,26 +207,6 @@ certifi
 
 ---
 
-## Pemberitahuan Hukum
-
-Alat ini hanya untuk penggunaan pribadi. Pengguna bertanggung jawab mematuhi Ketentuan Layanan YouTube dan hukum hak cipta. Jangan gunakan alat ini untuk mengunduh konten berhak cipta tanpa izin.
-
----
-
-## Penulis
-
-**Yahya Zulfikri**
-
-GitHub: [@zulfikriyahya](https://github.com/zulfikriyahya)
-
----
-
-## Lisensi
-
-Proyek ini bersifat open source dan tersedia untuk penggunaan pribadi. Harap hormati Ketentuan Layanan YouTube dan peraturan hak cipta saat menggunakan alat ini.
-
----
-
 ## Riwayat Versi
 
 ### v4.0 (Terkini)
@@ -336,15 +316,20 @@ Untuk dukungan dan pertanyaan:
 
 ---
 
-## Keamanan
+## Pemberitahuan Hukum
 
-### Melaporkan Kerentanan
+Alat ini hanya untuk penggunaan pribadi. Pengguna bertanggung jawab mematuhi Ketentuan Layanan YouTube dan hukum hak cipta. Jangan gunakan alat ini untuk mengunduh konten berhak cipta tanpa izin.
 
-Jika menemukan kerentanan keamanan, kirim email detail ke pengelola proyek. Jangan buat issue publik untuk masalah keamanan.
+---
 
-### Praktik Terbaik
+## Lisensi
 
-- Perbarui yt-dlp dan dependensi secara berkala
-- Gunakan sumber proxy terpercaya saja
-- Hindari menyimpan kredensial autentikasi dalam teks biasa
-- Tinjau izin file proxy.csv
+Proyek ini bersifat open source dan tersedia untuk penggunaan pribadi. Harap hormati Ketentuan Layanan YouTube dan peraturan hak cipta saat menggunakan alat ini.
+
+---
+
+## Penulis
+
+**Yahya Zulfikri**
+
+GitHub: [@zulfikriyahya](https://github.com/zulfikriyahya)
