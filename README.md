@@ -39,11 +39,11 @@ A high-performance Python CLI tool for downloading YouTube videos and audio with
 
 ### Single Video Mode
 
-![Single Video Download](./single_mode.png)
+![Single Video/Audio Download](./single_mode.png)
 
 ### Playlist Mode
 
-![Playlist Download](./playlist_mode.png)
+![Playlist Video/Audio Download](./playlist_mode.png)
 
 ### Proxy Mode
 
